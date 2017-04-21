@@ -1,5 +1,7 @@
 <h1>All The Guests</h1>
 
+<%= button_to "All Episodes", episodes_path, method: "get" %>
+
 <ul>
   <% @guests.each do |guest| %>
     <li><%= link_to guest.name, guest %></li>

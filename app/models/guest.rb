@@ -3,5 +3,4 @@ class Guest < ApplicationRecord
   has_many :episodes, through: :appearances
 
   validates :name, presence: true
-
 end

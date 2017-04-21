@@ -6,5 +6,6 @@ class EpisodesController < ApplicationController
 
   def show
     @episode = Episode.find(params[:id])
+    @appearance = Appearance.find_by(episode_id: @episode.id)
   end
 end

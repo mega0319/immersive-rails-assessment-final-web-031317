@@ -2,3 +2,14 @@
 
 <h3><%= @guest.occupation %></h3>
 
+<h4>Guest Appearances</h4>
+
+<% @appearances.each do |appearance| %>
+Episode Number: <%= appearance.episode.number  %> <br>
+Episode Date: <%= appearance.episode.date %> <br>
+Rating: <%= appearance.rating %> <br> <br>
+<% end %>
+
+<%= button_to "All Episodes", episodes_path, method: "get" %>
+<%= button_to "All Guests", guests_path, method: "get" %>
+<%= button_to "Create Appearance", new_appearance_path, method: "get" %>
